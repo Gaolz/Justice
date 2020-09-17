@@ -1,0 +1,156 @@
+baseURL = "localhost"
+languageCode = "zh-gb"
+title = "高老庄"
+theme = "hello-friend-ng"
+paginate = "10"
+hasCJKLanguage = true
+
+DefaultContentLanguage = "zh"
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+preserveTaxonomyNames = true
+
+disqusShortname = "https-gaowanxing-com"
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpored = false
+canonifyURLs = true
+
+disablePathToLower = true
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS      = false
+disableSitemap  = false
+disable404      = false
+disableHugoGeneratorInject = false
+
+[outputs]
+home = [ "HTML", "RSS" ]
+
+[outoutFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "高老庄"
+
+[permalinks]
+  posts = "/:year/:filename/"
+
+[author]
+  name = "老庄"
+
+[blackfriday]
+  hrefTargetBlank = true
+  nofollowLinks = true
+  noreferrerLinks = true
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
+
+  # Subtitle for home
+  homeSubtitle = "生活就该有生活的样子"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Metadata mostly used in document's head
+  description = "高老庄的历史"
+  keywords = "Hugo, blog, reading, ruby, programming, golang"
+  images = [""]
+
+  # Default theme "light" or "dark"
+  defaultTheme = "light"
+  themeColor = "#252627"
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  # gitUrl = ""
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
+
+  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  justifyContent = false  # Set "text-align: justify" to .content.
+
+  # Directory name of your blog content (default is `content/posts`)
+  conetntTypeName = "content/posts"
+
+  [params.logo]
+    logoText = "$ cd /home/"
+    logoHomeLink = "/"
+
+  # Social icons
+  [[prams.social]]
+    name = "email"
+    url = "mailto:glzztt@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/Gaolz"
+
+  [[params.info]]
+    subtitle = "高老庄的历史"
+    keywords = "movie, blog, reading, ruby, programming, golang"
+    description = "高老庄的历史"
+
+  [[params.theme]]
+    subtitle = "生活就该有生活的样子"
+    post_type = "page"
+    archive_post_type = "home"
+    readmore = true
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+  
+
+[languages]
+  [languages.en]
+    subtitle = "Hello"
+    weight = 2
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  [languages.zh]
+    subtitle = "Hello"
+    weight = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  # And you can even create generic menu
+[menu]
+  [[menu.main]]
+    # identifier = "blog"
+    # name       = "Blog"
+    # url        = "/posts"
+  [[menu.main]]
+    identifier = "movie"
+    name       = "Movie"
+    url        = "movie/"
+  [[menu.main]]
+    identifier = "tech"
+    name       = "Technology"
+    url        = "technology/"
+  [[menu.main]]
+    identifier = "reading"
+    name       = "Reading"
+    url        = "reading/"
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
